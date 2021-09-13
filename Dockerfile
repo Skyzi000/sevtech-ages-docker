@@ -4,6 +4,8 @@ MAINTAINER Jacob Wiltse <kelwing@kelnet.org>
 ARG FILE_NUMBER=3125/814
 ARG SEVTECH_VERSION=3.2.1
 
+EXPOSE 25565
+
 RUN mkdir -p /opt/ftb/world
 WORKDIR /opt/ftb
 
