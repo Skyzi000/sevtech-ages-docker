@@ -17,6 +17,6 @@ RUN curl -L -o server.zip https://media.forgecdn.net/files/${FILE_NUMBER}/SevTec
 COPY ops.json server.properties ./
 # RUN sed -i 's/2048M/4096M/g' settings.sh
 RUN chmod +x Install.sh ServerStart.sh
-RUN Install.sh
+RUN ./Install.sh
 
-ENTRYPOINT [ "ServerStart.sh" ]
+ENTRYPOINT [ "/opt/ftb/ServerStart.sh" ]
