@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  sevtech:
+    container_name: SevTech-Ages
+    image: ghcr.io/skyzi000/sevtech-ages-docker
+    ports:
+      - "25565:25565"
+    environment:
+      SERVER_NAME: SevTech-Ages
+    volumes:
+    - ./world:/opt/ftb/world
+    - type: bind
+      source: ./eula.txt
+      target: /opt/ftb/eula.txt
+    - type: bind
+      source: ./server.properties
+      target: /opt/ftb/server.properties
+    - type: bind
+      source: ./ops.json
+      target: /opt/ftb/ops.json
